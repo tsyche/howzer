@@ -1,8 +1,8 @@
-Focus for Windows — Beta Information
+Howzer for Windows — Beta Information
 
-Thank you for testing Focus on Windows.
+Thank you for testing Howzer on Windows.
 
-This is the first public beta release of Focus for desktop.
+This is the first public beta release of Howzer for desktop.
 It is not yet production-ready.
 
 Please be aware:

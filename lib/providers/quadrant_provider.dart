@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:focus/providers/task_provider.dart';
+import 'package:howzer/providers/task_provider.dart';
 import '../models/quadrant_enum.dart';
 import '../models/task_models.dart';
 

@@ -29,7 +29,7 @@
 //     await notificationsPlugin.show(
 //       9999, // Unique ID for test notification
 //       'Test Notification',
-//       'This is a test notification from Focus!',
+//       'This is a test notification from Howzer!',
 //       platformDetails,
 //       payload: 'test_payload',
 //     );

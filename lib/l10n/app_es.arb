@@ -5,9 +5,9 @@
   "spanish": "Español",
   "german": "Alemán",
   "russian": "Ruso",
-  "appName": "Focus",
+  "appName": "Howzer",
   "settingsTitle": "Ajustes",
-  "customizeExperience": "Personaliza tu experiencia con Focus",
+  "customizeExperience": "Personaliza tu experiencia con Howzer",
   "goodMorning": "Buenos días",
   "goodAfternoon": "Buenas tardes",
   "goodEvening": "Buenas noches",
@@ -20,6 +20,6 @@
   "completeSomeTasks": "Completa algunas tareas primero",
   "taskCompleted": "Tarea completada",
   "taskDeleted": "Tarea eliminada",
-  "madeWithLove": "Hecho con 💙 por Basim Basheer",
+  "madeWithLove": "Creado con Flutter",
   "privacyMessage": "🔒 Todos tus datos permanecen en tu dispositivo — sin nube, sin seguimiento."
 }

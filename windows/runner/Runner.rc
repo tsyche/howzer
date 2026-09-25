@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "focus" "\0"
+            VALUE "CompanyName", "Howzer" "\0"
+            VALUE "FileDescription", "howzer" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "focus" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "focus.exe" "\0"
-            VALUE "ProductName", "focus" "\0"
+            VALUE "InternalName", "howzer" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 Howzer contributors. All rights reserved." "\0"
+            VALUE "OriginalFilename", "howzer.exe" "\0"
+            VALUE "ProductName", "howzer" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

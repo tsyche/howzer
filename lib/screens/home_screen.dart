@@ -116,7 +116,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Focus',
+                                  'Howzer',
                                   style: theme.textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.w600,
                                     color: colorScheme.onSurface,

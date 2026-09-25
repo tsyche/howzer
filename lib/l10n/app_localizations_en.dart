@@ -27,13 +27,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get russian => 'Russian';
 
   @override
-  String get appName => 'Focus';
+  String get appName => 'Howzer';
 
   @override
   String get settingsTitle => 'Settings';
 
   @override
-  String get customizeExperience => 'Customize your Focus experience';
+  String get customizeExperience => 'Customize your Howzer experience';
 
   @override
   String get goodMorning => 'Good Morning';
@@ -89,7 +89,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get taskDeleted => 'Task deleted';
 
   @override
-  String get madeWithLove => 'Made with 💙 by Basim Basheer';
+  String get madeWithLove => 'Built with Flutter';
 
   @override
   String get privacyMessage => '🔒 All your data stays on your device — no cloud, no tracking.';
@@ -100,13 +100,13 @@ class AppLocalizationsEnGb extends AppLocalizationsEn {
   AppLocalizationsEnGb(): super('en_GB');
 
   @override
-  String get appName => 'Focus';
+  String get appName => 'Howzer';
 
   @override
   String get settingsTitle => 'Settings';
 
   @override
-  String get customizeExperience => 'Customize your Focus experience';
+  String get customizeExperience => 'Customize your Howzer experience';
 
   @override
   String get goodMorning => 'Good Morning';
@@ -162,7 +162,7 @@ class AppLocalizationsEnGb extends AppLocalizationsEn {
   String get taskDeleted => 'Task deleted';
 
   @override
-  String get madeWithLove => 'Made with 💙 by Basim Basheer';
+  String get madeWithLove => 'Built with Flutter';
 
   @override
   String get privacyMessage => '🔒 All your data stays on your device — no cloud, no tracking.';

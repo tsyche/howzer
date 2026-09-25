@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:focus/screens/desktop_task_edit_screen.dart';
+import 'package:howzer/screens/desktop_task_edit_screen.dart';
 import '../providers/quadrant_names_provider.dart';
 import '../providers/show_completed_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -294,7 +294,7 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen>
           const OpenCommandPaletteIntent(),
       const SingleActivator(LogicalKeyboardKey.keyK, meta: true):
           const OpenCommandPaletteIntent(),
-      // Focus Mode
+      // Single-task mode
       const SingleActivator(LogicalKeyboardKey.keyF, control: true):
           const ToggleFocusModeIntent(),
       const SingleActivator(LogicalKeyboardKey.keyF, meta: true):
@@ -516,7 +516,7 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen>
           Icon(Icons.center_focus_strong_rounded, color: colorScheme.primary),
           const SizedBox(width: 12),
           Text(
-            'Focus Mode',
+            'Single-task mode',
             style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w700,
               color: colorScheme.onSurface,
@@ -526,7 +526,7 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen>
           FilledButton.tonalIcon(
             onPressed: _toggleFocusMode,
             icon: const Icon(Icons.exit_to_app_rounded, size: 18),
-            label: const Text('Exit Focus'),
+            label: const Text('Exit single-task mode'),
           ),
         ],
       ),
@@ -710,7 +710,7 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen>
             ),
             const SizedBox(width: 12),
             Text(
-              'Focus',
+              'Howzer',
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w700,
                 color: colorScheme.onSurface,

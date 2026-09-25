@@ -1,7 +1,7 @@
 {
-  "appName": "Focus",
+  "appName": "Howzer",
   "settingsTitle": "Settings",
-  "customizeExperience": "Customize your Focus experience",
+  "customizeExperience": "Customize your Howzer experience",
   "goodMorning": "Good Morning",
   "goodAfternoon": "Good Afternoon",
   "goodEvening": "Good Evening",
@@ -14,6 +14,6 @@
   "completeSomeTasks": "Complete some tasks first",
   "taskCompleted": "Task completed",
   "taskDeleted": "Task deleted",
-  "madeWithLove": "Made with 💙 by Basim Basheer",
+  "madeWithLove": "Built with Flutter",
   "privacyMessage": "🔒 All your data stays on your device — no cloud, no tracking."
 }

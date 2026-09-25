@@ -39,7 +39,7 @@
     </queries>
 
     <application
-        android:label="Focus"
+        android:label="Howzer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true"

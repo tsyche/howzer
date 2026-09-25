@@ -139,7 +139,7 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'Focus'**
+  /// **'Howzer'**
   String get appName;
 
   /// No description provided for @settingsTitle.
@@ -151,7 +151,7 @@ abstract class AppLocalizations {
   /// No description provided for @customizeExperience.
   ///
   /// In en, this message translates to:
-  /// **'Customize your Focus experience'**
+  /// **'Customize your Howzer experience'**
   String get customizeExperience;
 
   /// No description provided for @goodMorning.
@@ -229,7 +229,7 @@ abstract class AppLocalizations {
   /// No description provided for @madeWithLove.
   ///
   /// In en, this message translates to:
-  /// **'Made with 💙 by Basim Basheer'**
+  /// **'Built with Flutter'**
   String get madeWithLove;
 
   /// No description provided for @privacyMessage.

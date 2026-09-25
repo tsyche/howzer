@@ -455,7 +455,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
             ),
             const SizedBox(width: 12),
             Text(
-              'About Focus',
+              'About Howzer',
               style: theme.textTheme.titleSmall?.copyWith(
                 fontWeight: FontWeight.w700,
                 color: colorScheme.onSurface,
@@ -485,7 +485,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
               ),
               const SizedBox(height: 8),
               Text(
-                'Made with 💙 by Basim Basheer',
+                'Built with Flutter',
                 style: theme.textTheme.bodySmall?.copyWith(
                   color: colorScheme.onSurface,
                   fontWeight: FontWeight.w600,
@@ -511,7 +511,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
               child: _aboutLinkButton(
                 icon: Icons.code_rounded,
                 label: 'Source',
-                url: 'https://github.com/Appaxaap/Focus',
+                url: 'https://github.com/tsyche/howzer',
                 colorScheme: colorScheme,
                 theme: theme,
               ),
@@ -521,7 +521,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
               child: _aboutLinkButton(
                 icon: Icons.bug_report_rounded,
                 label: 'Issues',
-                url: 'https://github.com/Appaxaap/Focus/issues',
+                url: 'https://github.com/tsyche/howzer/issues',
                 colorScheme: colorScheme,
                 theme: theme,
               ),
@@ -530,8 +530,8 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
             Expanded(
               child: _aboutLinkButton(
                 icon: Icons.telegram_rounded,
-                label: 'Community',
-                url: 'https://t.me/+IdAIopSTiXowYWFl',
+                label: 'Repository',
+                url: 'https://github.com/tsyche/howzer',
                 colorScheme: colorScheme,
                 theme: theme,
               ),
@@ -540,7 +540,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
         ),
         const SizedBox(height: 10),
         GestureDetector(
-          onTap: () => _launchUrl('https://buymeacoffee.com/bxmbshr'),
+          onTap: () => _launchUrl('https://github.com/tsyche/howzer'),
           child: Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 12),
@@ -553,7 +553,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
             ),
             child: Center(
               child: Text(
-                'Support Focus ☕',
+                'Howzer on GitHub',
                 style: theme.textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w600,
                   color: colorScheme.onSurface,

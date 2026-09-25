@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:focus/main.dart'; // To access hiveServiceProvider
+import 'package:howzer/main.dart'; // To access hiveServiceProvider
 import 'home_screen.dart';
 import 'sunrise_screen.dart';
 

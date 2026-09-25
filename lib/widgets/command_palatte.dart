@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:focus/providers/task_provider.dart';
-import 'package:focus/screens/desktop_task_edit_screen.dart';
+import 'package:howzer/providers/task_provider.dart';
+import 'package:howzer/screens/desktop_task_edit_screen.dart';
 
 // Represents a single command that can be executed.
 class Command {

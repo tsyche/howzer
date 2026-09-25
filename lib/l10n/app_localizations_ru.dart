@@ -27,13 +27,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get russian => 'Русский';
 
   @override
-  String get appName => 'Focus';
+  String get appName => 'Howzer';
 
   @override
   String get settingsTitle => 'Настройки';
 
   @override
-  String get customizeExperience => 'Настройте свой опыт Focus';
+  String get customizeExperience => 'Настройте свой опыт Howzer';
 
   @override
   String get goodMorning => 'Доброе утро';
@@ -93,7 +93,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get taskDeleted => 'Задача удалена';
 
   @override
-  String get madeWithLove => 'Создано с 💙 Basim Basheer';
+  String get madeWithLove => 'Создано с помощью Flutter';
 
   @override
   String get privacyMessage => '🔒 Все ваши данные остаются на устройстве — без облака, без отслеживания.';

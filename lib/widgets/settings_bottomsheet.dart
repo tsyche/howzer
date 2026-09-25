@@ -1097,7 +1097,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
                 borderRadius: BorderRadius.circular(25),
               ),
               child: Text(
-                'About Focus',
+                'About Howzer',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
@@ -1132,7 +1132,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
               child: Column(
                 children: [
                   Text(
-                    'Made with 💙 by Basim Basheer',
+                    'Built with Flutter',
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
@@ -1161,7 +1161,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
                     label: 'Source',
                     onTap: () => _launchUrl(
                       context,
-                      'https://github.com/Appaxaap/Focus',
+                      'https://github.com/tsyche/howzer',
                     ),
                     colorScheme: _getColorScheme(ref.read(themeProvider)),
                   ),
@@ -1173,7 +1173,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
                     label: 'Issues',
                     onTap: () => _launchUrl(
                       context,
-                      'https://github.com/Appaxaap/Focus/issues',
+                      'https://github.com/tsyche/howzer/issues',
                     ),
                     colorScheme: _getColorScheme(ref.read(themeProvider)),
                   ),
@@ -1182,9 +1182,9 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
                 Expanded(
                   child: _buildActionButton(
                     icon: Icons.telegram_rounded,
-                    label: 'Community',
+                    label: 'Repository',
                     onTap: () =>
-                        _launchUrl(context, 'https://t.me/+IdAIopSTiXowYWFl'),
+                        _launchUrl(context, 'https://github.com/tsyche/howzer'),
                     colorScheme: _getColorScheme(ref.read(themeProvider)),
                   ),
                 ),
@@ -1194,7 +1194,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
-                _launchUrl(context, 'https://buymeacoffee.com/bxmbshr');
+                _launchUrl(context, 'https://github.com/tsyche/howzer');
               },
               child: Container(
                 width: double.infinity,
@@ -1209,7 +1209,7 @@ class _SettingsBottomSheetState extends ConsumerState<SettingsBottomSheet>
                 ),
                 child: Center(
                   child: Text(
-                    'Support Focus ☕',
+                    'Howzer on GitHub',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onSurface,
                       fontSize: 15,

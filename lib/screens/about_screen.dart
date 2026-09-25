@@ -87,7 +87,7 @@ class AboutScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    'Focus',
+                    'Howzer',
                     style: theme.textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.w700,
                       color: colorScheme.onPrimaryContainer,
@@ -164,7 +164,7 @@ class AboutScreen extends StatelessWidget {
                     'GitHub Repository',
                     'View source code',
                     Icons.code_rounded,
-                    'https://github.com/Appaxaap/focus-android',
+                    'https://github.com/tsyche/howzer',
                   ),
                   const SizedBox(height: 12),
                   _buildLinkItem(
@@ -172,7 +172,7 @@ class AboutScreen extends StatelessWidget {
                     'Report Issues',
                     'Help us improve',
                     Icons.bug_report_rounded,
-                    'https://github.com/Appaxaap/focus-android/issues',
+                    'https://github.com/tsyche/howzer/issues',
                   ),
                   const SizedBox(height: 12),
                   _buildLinkItem(
@@ -180,7 +180,7 @@ class AboutScreen extends StatelessWidget {
                     'Documentation',
                     'Learn more',
                     Icons.description_rounded,
-                    'https://github.com/Appaxaap/focus-android/wiki',
+                    'https://github.com/tsyche/howzer/wiki',
                   ),
                 ],
               ),
@@ -206,7 +206,7 @@ class AboutScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '© 2025 Focus Team. All rights reserved.',
+                    '© 2026 Howzer contributors.',
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: colorScheme.onSurfaceVariant,
                     ),
@@ -418,7 +418,7 @@ class AboutScreen extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         Text(
-          'Basim Basheer',
+          'Howzer contributors',
           style: theme.textTheme.titleMedium?.copyWith(
             fontWeight: FontWeight.w600,
             color: colorScheme.onSurface,
@@ -426,7 +426,7 @@ class AboutScreen extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          'Lead Developer',
+          'Howzer project',
           style: theme.textTheme.bodyMedium?.copyWith(
             color: colorScheme.onSurfaceVariant,
           ),
@@ -439,14 +439,14 @@ class AboutScreen extends StatelessWidget {
               context,
               Icons.code_rounded,
               'GitHub',
-              'github.com/Appaxaap',
+              'github.com/tsyche',
             ),
             const SizedBox(width: 12),
             _buildSocialChip(
               context,
               Icons.work_rounded,
-              'LinkedIn',
-              'linkedin.com/in/basim-basheer',
+              'Issues',
+              'github.com/tsyche/howzer/issues',
             ),
           ],
         ),

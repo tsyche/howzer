@@ -1,4 +1,4 @@
-package com.codecx.focus
+package com.howzer.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -176,7 +176,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
                     ListTile(
                       leading: const Icon(Icons.person_outline),
                       title: Text(
-                        'About Developer',
+                        'About Howzer Project',
                         style: theme.textTheme.bodyLarge?.copyWith(
                           color: colorScheme.onSurfaceVariant,
                         ),
@@ -400,10 +400,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       }
 
       final timestamp = DateTime.now().millisecondsSinceEpoch;
-      final backupFile = File('${directory.path}/focus_backup_$timestamp.json');
+      final backupFile = File('${directory.path}/howzer_backup_$timestamp.json');
 
       await backupFile.writeAsString(backupData);
-      _showSuccessSnackbar(context, 'Backup saved to Downloads/focus_backup_$timestamp.json');
+      _showSuccessSnackbar(context, 'Backup saved to Downloads/howzer_backup_$timestamp.json');
     } catch (e, s) {
       debugPrint('Error exporting backup: $e\n$s');
       _showSuccessSnackbar(context, 'Failed to export backup', isError: true);
@@ -529,7 +529,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
                 color: Theme.of(context).colorScheme.primary, size: 40),
             const SizedBox(height: 16),
             Text(
-              'About Focus',
+              'About Howzer',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -538,7 +538,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             ),
             const SizedBox(height: 12),
             Text(
-              'Focus is a task management app based on the Eisenhower Matrix '
+              'Howzer is a task management app based on the Eisenhower Matrix '
               'to help you prioritize what matters most.\n\n'
               '- Task categorization into quadrants\n'
               '- Backup and restore functionality\n'
@@ -573,7 +573,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
                 color: Theme.of(context).colorScheme.primary, size: 40),
             const SizedBox(height: 16),
             Text(
-              'About Developer',
+              'About Howzer Project',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -582,9 +582,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             ),
             const SizedBox(height: 12),
             Text(
-              'This app was developed by Basim Basheer.\n\n'
-              'GitHub: github.com/Appaxaap\n'
-              'LinkedIn: linkedin.com/in/Basim Basheer',
+              'Howzer is maintained in this repository.\n\n'
+              'GitHub: github.com/tsyche/howzer',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,

@@ -2,9 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:focus/services/hive_service.dart';
-import 'package:focus/services/app_badge_service.dart';
-import 'package:focus/services/notification_service.dart';
+import 'package:howzer/services/hive_service.dart';
+import 'package:howzer/services/app_badge_service.dart';
+import 'package:howzer/services/notification_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:timezone/data/latest.dart' as tz;
@@ -82,7 +82,7 @@ void main() async {
           }),
         ),
       ],
-      child: const FocusApp(),
+      child: const HowzerApp(),
     ),
   );
 }
@@ -142,14 +142,14 @@ class SplashRouterScreen extends ConsumerWidget {
 }
 
 // The root widget of the application.
-class FocusApp extends ConsumerStatefulWidget {
-  const FocusApp({super.key});
+class HowzerApp extends ConsumerStatefulWidget {
+  const HowzerApp({super.key});
 
   @override
-  ConsumerState<FocusApp> createState() => _FocusAppState();
+  ConsumerState<HowzerApp> createState() => _HowzerAppState();
 }
 
-class _FocusAppState extends ConsumerState<FocusApp> {
+class _HowzerAppState extends ConsumerState<HowzerApp> {
   late final ProviderSubscription<List<Task>> _tasksSubscription;
   late final ProviderSubscription<AsyncValue<bool>> _badgePrefSubscription;
 
@@ -233,7 +233,7 @@ class _FocusAppState extends ConsumerState<FocusApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Focus',
+      title: 'Howzer',
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: appBackgroundColor,

@@ -1,0 +1,45 @@
+name: Check documentation
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'justfile'
+      - 'scripts/check-docs.sh'
+      - 'scripts/check-docs.local.sh'
+      - '.tool-versions'
+      - 'pubspec.yaml'
+      - 'installers/desktop.iss'
+      - 'windows/runner/Runner.rc'
+      - '.github/workflows/build.yml'
+      - '.github/workflows/docs.yml'
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'justfile'
+      - 'scripts/check-docs.sh'
+      - 'scripts/check-docs.local.sh'
+      - '.tool-versions'
+      - 'pubspec.yaml'
+      - 'installers/desktop.iss'
+      - 'windows/runner/Runner.rc'
+      - '.github/workflows/build.yml'
+      - '.github/workflows/docs.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: extractions/setup-just@v4
+        with:
+          just-version: '1.58.0'
+      - run: just check-docs

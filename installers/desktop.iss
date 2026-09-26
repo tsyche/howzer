@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Howzer"
-#define MyAppVersion "1.0"
+#define MyAppVersion "0.1.0"
 #define MyAppPublisher "Howzer contributors"
 #define MyAppURL "https://github.com/tsyche/howzer"
 #define MyAppExeName "howzer.exe"
@@ -30,8 +30,6 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
 LicenseFile=LICENSE.txt
-InfoBeforeFile=INSTALL_INFO.txt
-InfoAfterFile=AFTER_INSTALL.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputDir=Output

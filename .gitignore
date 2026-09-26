@@ -25,6 +25,7 @@ key.properties
 # Local database files
 *.hive
 *.lock
+!/pubspec.lock
 
 # IntelliJ related
 *.iml
@@ -126,3 +127,4 @@ installers/*.appimage
 installers/*.deb
 installers/*.rpm
 installers/*.zip
+.audit-log

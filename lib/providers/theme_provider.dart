@@ -1,14 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart'
+    show StateNotifier, StateNotifierProvider;
 import 'package:howzer/services/hive_service.dart';
 
 import '../main.dart';
 
-enum AppTheme {
-  light,
-  dark,
-  amoled, system,
-}
+enum AppTheme { light, dark, amoled, system }
 
 final themeProvider = StateNotifierProvider<ThemeNotifier, AppTheme>((ref) {
   final hiveService = ref.read(hiveServiceProvider);

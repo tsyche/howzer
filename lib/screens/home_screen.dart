@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../providers/show_completed_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart' show StateProvider;
 import 'package:flutter/services.dart';
 import '../models/quadrant_enum.dart';
 import '../models/task_models.dart';
@@ -84,9 +85,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
 
     ref.listen<List<Task>>(taskProvider, (previous, current) {
       if (previous != null && previous.length > current.length) {
-        final completedTask = previous.where(
-          (task) => !current.any((t) => t.id == task.id),
-        ).firstOrNull;
+        final completedTask = previous
+            .where((task) => !current.any((t) => t.id == task.id))
+            .firstOrNull;
         if (completedTask != null) {
           _showTaskCompletedSnackbar(context, completedTask, ref);
         }
@@ -149,17 +150,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                   child: _isSearching
                       ? _buildSearchResults(tasks, theme, colorScheme)
                       : viewMode == ViewMode.card
-                          ? _buildCardView(
-                              showCompleted ? tasks : incompleteTasks,
-                              colorScheme,
-                            )
-                          : _buildListView(
-                              tasks,
-                              filter,
-                              showCompleted,
-                              theme,
-                              colorScheme,
-                            ),
+                      ? _buildCardView(
+                          showCompleted ? tasks : incompleteTasks,
+                          colorScheme,
+                        )
+                      : _buildListView(
+                          tasks,
+                          filter,
+                          showCompleted,
+                          theme,
+                          colorScheme,
+                        ),
                 ),
               ],
             ),
@@ -288,9 +289,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               _closeSearch();
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (_) => TaskEditScreen(task: task),
-                ),
+                MaterialPageRoute(builder: (_) => TaskEditScreen(task: task)),
               );
             },
             child: Container(
@@ -298,9 +297,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               decoration: BoxDecoration(
                 color: colorScheme.surfaceContainerLow,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: colorScheme.outline.withOpacity(0.3),
-                ),
+                border: Border.all(color: colorScheme.outline.withOpacity(0.3)),
               ),
               child: Row(
                 children: [
@@ -402,7 +399,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               Expanded(
                 child: _buildMatrixCard(
                   quadrant: Quadrant.notUrgentImportant,
-                  title: quadrantNames[Quadrant.notUrgentImportant] ?? 'Schedule',
+                  title:
+                      quadrantNames[Quadrant.notUrgentImportant] ?? 'Schedule',
                   description: 'Not Urgent • Important',
                   accentColor: const Color(0xFF2ED573),
                   taskCount: tasks
@@ -432,7 +430,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               Expanded(
                 child: _buildMatrixCard(
                   quadrant: Quadrant.urgentNotImportant,
-                  title: quadrantNames[Quadrant.urgentNotImportant] ?? 'Delegate',
+                  title:
+                      quadrantNames[Quadrant.urgentNotImportant] ?? 'Delegate',
                   description: 'Urgent • Not Important',
                   accentColor: const Color(0xFFFFA726),
                   taskCount: tasks
@@ -456,7 +455,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               Expanded(
                 child: _buildMatrixCard(
                   quadrant: Quadrant.notUrgentNotImportant,
-                  title: quadrantNames[Quadrant.notUrgentNotImportant] ?? 'Eliminate',
+                  title:
+                      quadrantNames[Quadrant.notUrgentNotImportant] ??
+                      'Eliminate',
                   description: 'Not Urgent • Not Important',
                   accentColor: const Color(0xFF747D8C),
                   taskCount: tasks
@@ -745,10 +746,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               HapticFeedback.mediumImpact();
               showAppDialog(
                 context: context,
-                builder: (_) => QuadrantEditDialog(
-                  quadrant: quadrant,
-                  currentName: title,
-                ),
+                builder: (_) =>
+                    QuadrantEditDialog(quadrant: quadrant, currentName: title),
               );
             },
             child: Container(
@@ -865,10 +864,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               HapticFeedback.mediumImpact();
               showAppDialog(
                 context: context,
-                builder: (_) => QuadrantEditDialog(
-                  quadrant: quadrant,
-                  currentName: title,
-                ),
+                builder: (_) =>
+                    QuadrantEditDialog(quadrant: quadrant, currentName: title),
               );
             },
             child: Container(
@@ -963,8 +960,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                 onWillAcceptWithDetails: (details) =>
                     details.data.quadrant != quadrant,
                 onAcceptWithDetails: (details) {
-                  final updatedTask =
-                      details.data.copyWith(quadrant: quadrant);
+                  final updatedTask = details.data.copyWith(quadrant: quadrant);
                   ref.read(taskProvider.notifier).updateTask(updatedTask);
                   HapticFeedback.mediumImpact();
                 },
@@ -1187,9 +1183,9 @@ void _showTaskCompletedSnackbar(
         label: 'UNDO',
         textColor: colorScheme.onPrimary,
         onPressed: () {
-          ref.read(taskProvider.notifier).updateTask(
-            completedTask.copyWith(isCompleted: false),
-          );
+          ref
+              .read(taskProvider.notifier)
+              .updateTask(completedTask.copyWith(isCompleted: false));
           HapticFeedback.selectionClick();
         },
       ),

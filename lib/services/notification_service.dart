@@ -65,7 +65,7 @@ class NotificationService {
       );
 
       await _notificationsPlugin.initialize(
-        const InitializationSettings(
+        settings: const InitializationSettings(
           android: androidSettings,
           iOS: iosSettings,
         ),
@@ -92,8 +92,8 @@ class NotificationService {
 
   Future<void> _setDeviceTimezone() async {
     try {
-      final tzName = await FlutterTimezone.getLocalTimezone();
-      tz.setLocalLocation(tz.getLocation(tzName));
+      final timezoneInfo = await FlutterTimezone.getLocalTimezone();
+      tz.setLocalLocation(tz.getLocation(timezoneInfo.identifier));
     } catch (_) {
       tz.setLocalLocation(tz.getLocation('UTC'));
     }
@@ -189,11 +189,14 @@ class NotificationService {
     const iosDetails = DarwinNotificationDetails();
 
     await _notificationsPlugin.zonedSchedule(
-      id,
-      title,
-      body,
-      scheduled,
-      const NotificationDetails(android: androidDetails, iOS: iosDetails),
+      id: id,
+      title: title,
+      body: body,
+      scheduledDate: scheduled,
+      notificationDetails: const NotificationDetails(
+        android: androidDetails,
+        iOS: iosDetails,
+      ),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       payload: payload,
     );
@@ -206,7 +209,7 @@ class NotificationService {
   Future<void> cancelNotification(int id) async {
     if (!isSupported) return;
     await onReady;
-    await _notificationsPlugin.cancel(id);
+    await _notificationsPlugin.cancel(id: id);
   }
 
   Future<void> cancelAllNotifications() async {

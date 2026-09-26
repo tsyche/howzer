@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart'
+    show StateNotifier, StateNotifierProvider;
 import '../main.dart';
 import '../services/hive_service.dart';
 
@@ -7,7 +8,7 @@ class LocaleNotifier extends StateNotifier<Locale> {
   final HiveService _hiveService;
 
   LocaleNotifier(this._hiveService, Locale initialLocale)
-      : super(initialLocale);
+    : super(initialLocale);
 
   Future<void> setLocale(Locale newLocale) async {
     state = newLocale;

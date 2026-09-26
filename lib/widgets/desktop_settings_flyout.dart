@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../providers/app_icon_badge_provider.dart';
 import '../providers/show_completed_provider.dart';
 import '../providers/task_provider.dart';
@@ -44,7 +45,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
   late AnimationController _animController;
   late Animation<double> _fadeAnim;
   late Animation<Offset> _slideAnim;
-  String _version = '';
+  String _version = 'unknown';
 
   @override
   void initState() {
@@ -70,7 +71,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
       final info = await PackageInfo.fromPlatform();
       if (mounted) setState(() => _version = info.version);
     } catch (_) {
-      if (mounted) setState(() => _version = '2.1.0');
+      // Keep the neutral fallback when package metadata is unavailable.
     }
   }
 
@@ -477,7 +478,7 @@ class _DesktopSettingsFlyoutState extends ConsumerState<_DesktopSettingsFlyout>
           child: Column(
             children: [
               Text(
-                _version.isNotEmpty ? 'Version $_version' : 'Version 2.1.0',
+                'Version $_version',
                 style: theme.textTheme.bodySmall?.copyWith(
                   color: colorScheme.onSurfaceVariant,
                   fontSize: 12,

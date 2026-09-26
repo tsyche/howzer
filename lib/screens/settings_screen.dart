@@ -385,7 +385,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       final backupData = await hiveService.exportData();
 
       if (!Platform.isAndroid) {
-        _showSuccessSnackbar(context, 'Backup export is only supported on Android', isError: true);
+        _showSuccessSnackbar(
+          context,
+          'Backup export is only supported on Android',
+          isError: true,
+        );
         return;
       }
 
@@ -400,10 +404,15 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       }
 
       final timestamp = DateTime.now().millisecondsSinceEpoch;
-      final backupFile = File('${directory.path}/howzer_backup_$timestamp.json');
+      final backupFile = File(
+        '${directory.path}/howzer_backup_$timestamp.json',
+      );
 
       await backupFile.writeAsString(backupData);
-      _showSuccessSnackbar(context, 'Backup saved to Downloads/howzer_backup_$timestamp.json');
+      _showSuccessSnackbar(
+        context,
+        'Backup saved to Downloads/howzer_backup_$timestamp.json',
+      );
     } catch (e, s) {
       debugPrint('Error exporting backup: $e\n$s');
       _showSuccessSnackbar(context, 'Failed to export backup', isError: true);
@@ -414,18 +423,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     try {
       final hiveService = ref.read(hiveServiceProvider);
 
-      final result = await FilePicker.platform.pickFiles(
+      final result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['json'],
         dialogTitle: 'Select Backup File',
       );
 
-      if (result == null || result.files.isEmpty) {
+      if (result.isEmpty) {
         _showSuccessSnackbar(context, 'No file selected', isError: true);
         return;
       }
 
-      final file = File(result.files.single.path!);
+      final file = File(result.single.path!);
       final jsonString = await file.readAsString();
       final decoded = jsonDecode(jsonString);
 
@@ -435,7 +444,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       } else if (decoded is List) {
         jsonList = decoded;
       } else {
-        _showSuccessSnackbar(context, 'Invalid backup file format', isError: true);
+        _showSuccessSnackbar(
+          context,
+          'Invalid backup file format',
+          isError: true,
+        );
         return;
       }
 
@@ -457,8 +470,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.warning_outlined,
-                color: Theme.of(context).colorScheme.error, size: 40),
+            Icon(
+              Icons.warning_outlined,
+              color: Theme.of(context).colorScheme.error,
+              size: 40,
+            ),
             const SizedBox(height: 20),
             Text(
               'Clear All Data?',
@@ -525,8 +541,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.apps_outlined,
-                color: Theme.of(context).colorScheme.primary, size: 40),
+            Icon(
+              Icons.apps_outlined,
+              color: Theme.of(context).colorScheme.primary,
+              size: 40,
+            ),
             const SizedBox(height: 16),
             Text(
               'About Howzer',
@@ -569,8 +588,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.person_outline,
-                color: Theme.of(context).colorScheme.primary, size: 40),
+            Icon(
+              Icons.person_outline,
+              color: Theme.of(context).colorScheme.primary,
+              size: 40,
+            ),
             const SizedBox(height: 16),
             Text(
               'About Howzer Project',

@@ -16,11 +16,11 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 2.2.1+9
+version: 0.1.0+1
 
 environment:
-  sdk: ^3.8.1
-  flutter: "3.32.5"
+  sdk: ^3.13.2
+  flutter: "3.47.2"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -35,23 +35,23 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_riverpod: ^2.6.1
+  flutter_riverpod: ^3.4.3
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   uuid: ^4.5.1
   intl: ^0.20.2
-  flutter_localization: ^0.3.3
-  flutter_local_notifications: ^19.2.1
-  flutter_timezone: ^4.1.1
-  timezone: ^0.10.1
-  share_plus: ^11.0.0
+  flutter_localization: ^0.4.1
+  flutter_local_notifications: ^22.3.1
+  flutter_timezone: ^5.1.0
+  timezone: ^0.11.1
+  share_plus: ^13.3.0
   path_provider: ^2.1.5
-  file_picker: ^10.2.0
-  permission_handler: ^12.0.0+1
+  file_picker: ^13.1.0
+  permission_handler: ^13.0.2
   shared_preferences: ^2.5.3
   url_launcher: ^6.3.2
-  google_fonts: ^6.2.1
-  package_info_plus: ^8.3.0
+  google_fonts: ^8.2.1
+  package_info_plus: ^10.2.1
   app_badge_plus: ^1.0.0
   flutter_screenutil: ^5.9.3
   window_manager: ^0.5.1
@@ -66,16 +66,10 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   hive_generator: ^2.0.1
   build_runner: ^2.4.13
   flutter_launcher_icons: ^0.14.4
-  intl_utils: ^2.8.8
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
 
   # The following line ensures that the Material Icons font is

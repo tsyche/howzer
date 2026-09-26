@@ -1,8 +1,14 @@
 # Howzer
 
-**TL;DR:** Howzer is a Flutter task manager built around the Eisenhower Matrix. This checkout is being rebranded and its product identity, icons, screenshots, and platform identifiers are temporary placeholders.
+**TL;DR:** Howzer is a Flutter task manager built around the Eisenhower Matrix. Its current icons and platform identifiers are temporary placeholders; product screenshots will be made after the visual redesign.
 
 Howzer keeps the inherited task matrix and useful UI while its next phases define the product scope and replace Hive task storage with portable Markdown. See [ROADMAP.md](ROADMAP.md) for the provisional delivery outline.
+
+## Contents
+
+- [Current capabilities](#current-capabilities)
+- [Development](#development)
+- [Attribution and license](#attribution-and-license)
 
 ## Current capabilities
 
@@ -15,7 +21,10 @@ Platform directories and visible UI do not prove release readiness. Device behav
 
 ## Development
 
-This is a Flutter project. The Flutter SDK version is pinned in `pubspec.yaml`. No repository task runner is configured yet.
+Install Flutter and Java versions from `.tool-versions`, then run `just setup`.
+Use `just run` to launch the app, `just lint` for static checks, `just test` for tests, and `just check-docs` for documentation checks.
+The inherited counter test needs replacement before the test command can serve as a release gate. See [AGENTS.md](AGENTS.md) for development constraints.
+The `0.1.0+1` app version is a development placeholder; no Howzer release has been verified.
 
 ## Attribution and license
 

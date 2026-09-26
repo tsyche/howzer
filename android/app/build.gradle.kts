@@ -1,8 +1,8 @@
 import java.util.Properties
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -14,8 +14,8 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.howzer.app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"
+    compileSdk = 37
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -23,16 +23,18 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_17
+        }
     }
 
     defaultConfig {
         applicationId = "com.howzer.app"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = 9
-        versionName = "2.2.1"
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
 
         // multiDex support
         multiDexEnabled = true
@@ -91,8 +93,6 @@ dependencies {
     // MultiDex support
     implementation("androidx.multidex:multidex:2.0.1")
 
-    // Flutter dependencies
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.20")
 }
 
 flutter {

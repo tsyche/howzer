@@ -72,15 +72,11 @@ void main() async {
   runApp(
     ProviderScope(
       overrides: [
-        hiveServiceProvider.overrideWithProvider(
-          Provider((ref) => hiveService),
-        ),
-        themeProvider.overrideWithProvider(
-          StateNotifierProvider<ThemeNotifier, AppTheme>((ref) {
-            return ThemeNotifier(hiveService)
-              ..setTheme(savedTheme ?? AppTheme.light);
-          }),
-        ),
+        hiveServiceProvider.overrideWith((ref) => hiveService),
+        themeProvider.overrideWith((ref) {
+          return ThemeNotifier(hiveService)
+            ..setTheme(savedTheme ?? AppTheme.light);
+        }),
       ],
       child: const HowzerApp(),
     ),
